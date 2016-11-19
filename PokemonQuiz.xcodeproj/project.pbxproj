@@ -1,0 +1,369 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		457C8A201DDDE0B50007B790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C8A1F1DDDE0B50007B790 /* AppDelegate.swift */; };
+		457C8A251DDDE0B50007B790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457C8A231DDDE0B50007B790 /* Main.storyboard */; };
+		457C8A271DDDE0B50007B790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457C8A261DDDE0B50007B790 /* Assets.xcassets */; };
+		457C8A2A1DDDE0B50007B790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457C8A281DDDE0B50007B790 /* LaunchScreen.storyboard */; };
+		457C8A341DDDEE8F0007B790 /* PoplarStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 457C8A321DDDEE8F0007B790 /* PoplarStd.otf */; };
+		457C8A351DDDEE8F0007B790 /* StencilStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 457C8A331DDDEE8F0007B790 /* StencilStd.otf */; };
+		457C8A381DDDFE9F0007B790 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C8A371DDDFE9F0007B790 /* CircleView.swift */; };
+		457C8A3B1DDE03E00007B790 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C8A3A1DDE03E00007B790 /* RoundButton.swift */; };
+		457C8A3E1DDE046A0007B790 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C8A3D1DDE046A0007B790 /* PlayViewController.swift */; };
+		457C8A401DDE04990007B790 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C8A3F1DDE04990007B790 /* HomeViewController.swift */; };
+		45A528861DE021AB00112D75 /* RPCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A528851DE021AB00112D75 /* RPCircularProgress.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		457C8A1C1DDDE0B50007B790 /* PokemonQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		457C8A1F1DDDE0B50007B790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		457C8A241DDDE0B50007B790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		457C8A261DDDE0B50007B790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		457C8A291DDDE0B50007B790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		457C8A2B1DDDE0B50007B790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457C8A321DDDEE8F0007B790 /* PoplarStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoplarStd.otf; sourceTree = "<group>"; };
+		457C8A331DDDEE8F0007B790 /* StencilStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StencilStd.otf; sourceTree = "<group>"; };
+		457C8A371DDDFE9F0007B790 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		457C8A3A1DDE03E00007B790 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		457C8A3D1DDE046A0007B790 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		457C8A3F1DDE04990007B790 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		45A528851DE021AB00112D75 /* RPCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPCircularProgress.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		457C8A191DDDE0B50007B790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		457C8A131DDDE0B50007B790 = {
+			isa = PBXGroup;
+			children = (
+				457C8A1E1DDDE0B50007B790 /* PokemonQuiz */,
+				457C8A1D1DDDE0B50007B790 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		457C8A1D1DDDE0B50007B790 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				457C8A1C1DDDE0B50007B790 /* PokemonQuiz.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		457C8A1E1DDDE0B50007B790 /* PokemonQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				45A528841DE021AB00112D75 /* Libraries */,
+				457C8A3C1DDE044F0007B790 /* ViewControllers */,
+				457C8A391DDE03C50007B790 /* Helpers */,
+				457C8A361DDDFE670007B790 /* Views */,
+				457C8A311DDDEE8F0007B790 /* Font */,
+				457C8A1F1DDDE0B50007B790 /* AppDelegate.swift */,
+				457C8A231DDDE0B50007B790 /* Main.storyboard */,
+				457C8A261DDDE0B50007B790 /* Assets.xcassets */,
+				457C8A281DDDE0B50007B790 /* LaunchScreen.storyboard */,
+				457C8A2B1DDDE0B50007B790 /* Info.plist */,
+			);
+			path = PokemonQuiz;
+			sourceTree = "<group>";
+		};
+		457C8A311DDDEE8F0007B790 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				457C8A321DDDEE8F0007B790 /* PoplarStd.otf */,
+				457C8A331DDDEE8F0007B790 /* StencilStd.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		457C8A361DDDFE670007B790 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				457C8A371DDDFE9F0007B790 /* CircleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		457C8A391DDE03C50007B790 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				457C8A3A1DDE03E00007B790 /* RoundButton.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		457C8A3C1DDE044F0007B790 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				457C8A3D1DDE046A0007B790 /* PlayViewController.swift */,
+				457C8A3F1DDE04990007B790 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		45A528841DE021AB00112D75 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				45A528851DE021AB00112D75 /* RPCircularProgress.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		457C8A1B1DDDE0B50007B790 /* PokemonQuiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 457C8A2E1DDDE0B50007B790 /* Build configuration list for PBXNativeTarget "PokemonQuiz" */;
+			buildPhases = (
+				457C8A181DDDE0B50007B790 /* Sources */,
+				457C8A191DDDE0B50007B790 /* Frameworks */,
+				457C8A1A1DDDE0B50007B790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokemonQuiz;
+			productName = PokemonQuiz;
+			productReference = 457C8A1C1DDDE0B50007B790 /* PokemonQuiz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		457C8A141DDDE0B50007B790 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Enrik;
+				TargetAttributes = {
+					457C8A1B1DDDE0B50007B790 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 457C8A171DDDE0B50007B790 /* Build configuration list for PBXProject "PokemonQuiz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 457C8A131DDDE0B50007B790;
+			productRefGroup = 457C8A1D1DDDE0B50007B790 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				457C8A1B1DDDE0B50007B790 /* PokemonQuiz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		457C8A1A1DDDE0B50007B790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457C8A2A1DDDE0B50007B790 /* LaunchScreen.storyboard in Resources */,
+				457C8A341DDDEE8F0007B790 /* PoplarStd.otf in Resources */,
+				457C8A351DDDEE8F0007B790 /* StencilStd.otf in Resources */,
+				457C8A271DDDE0B50007B790 /* Assets.xcassets in Resources */,
+				457C8A251DDDE0B50007B790 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		457C8A181DDDE0B50007B790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457C8A401DDE04990007B790 /* HomeViewController.swift in Sources */,
+				45A528861DE021AB00112D75 /* RPCircularProgress.swift in Sources */,
+				457C8A3B1DDE03E00007B790 /* RoundButton.swift in Sources */,
+				457C8A3E1DDE046A0007B790 /* PlayViewController.swift in Sources */,
+				457C8A381DDDFE9F0007B790 /* CircleView.swift in Sources */,
+				457C8A201DDDE0B50007B790 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		457C8A231DDDE0B50007B790 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				457C8A241DDDE0B50007B790 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		457C8A281DDDE0B50007B790 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				457C8A291DDDE0B50007B790 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		457C8A2C1DDDE0B50007B790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		457C8A2D1DDDE0B50007B790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		457C8A2F1DDDE0B50007B790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PokemonQuiz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddc.PokemonQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		457C8A301DDDE0B50007B790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PokemonQuiz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddc.PokemonQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		457C8A171DDDE0B50007B790 /* Build configuration list for PBXProject "PokemonQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				457C8A2C1DDDE0B50007B790 /* Debug */,
+				457C8A2D1DDDE0B50007B790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		457C8A2E1DDDE0B50007B790 /* Build configuration list for PBXNativeTarget "PokemonQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				457C8A2F1DDDE0B50007B790 /* Debug */,
+				457C8A301DDDE0B50007B790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 457C8A141DDDE0B50007B790 /* Project object */;
+}
