@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "PlayViewController.viewDidLoad() -&gt; ():PlayViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.listPokemon">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PlayViewController.initImageView() -&gt; ():PlayViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PlayViewController.(initImageView() -&gt; ()).(closure #1):PlayViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
