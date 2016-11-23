@@ -92,14 +92,16 @@ class SettingViewController: UIViewController {
     
     @IBAction func actionSwitchSound(_ sender: AnyObject) {
         
-        if self.isSound == true {
-            Audio.sharedInstance.playSound(name: Constant.Music.SwitchSoundName, exten: Constant.Music.SwitchSoundExten)
-        }
+        
         
         if self.switchSound.isOn == true {
             self.isSound = true
         } else {
             self.isSound = false
+        }
+        
+        if self.isSound == true {
+            Audio.sharedInstance.playSound(name: Constant.Music.SwitchSoundName, exten: Constant.Music.SwitchSoundExten)
         }
     }
     

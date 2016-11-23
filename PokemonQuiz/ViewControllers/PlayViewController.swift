@@ -45,6 +45,7 @@ class PlayViewController: UIViewController {
     var isSound: Bool = false
     
     var isBack: Bool = false
+    var isFirst: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,12 +68,15 @@ class PlayViewController: UIViewController {
             if self.isAnswered == false {
                 self.showRealImage()
             }
-            if !self.isBack {
-                self.navigationController!.popViewController(animated: true)
-            }
             
-            self.transferScoreDelegate.transferScore(score: self.score)
-            
+            self.delay(0.9, closure: {
+                if !self.isBack {
+                    self.navigationController!.popViewController(animated: true)
+                }
+                
+                self.transferScoreDelegate.transferScore(score: self.score)
+            })
+
         }
         self.newSet()
     }
@@ -107,8 +111,11 @@ class PlayViewController: UIViewController {
         
         self.randomPokemon()
         self.initImageView()
-        self.initButton()
         
+        for button in buttonAnswers {
+            button.backgroundColor = UIColor.white
+        }
+        self.isAnswered = false
     }
     
     func randomPokemon() {
@@ -160,50 +167,46 @@ class PlayViewController: UIViewController {
     }
     
     func initButton() {
-        for button in buttonAnswers {
-            button.backgroundColor = UIColor.white
-        }
         for button in self.buttonAnswers {
             button.isUserInteractionEnabled = true
         }
     }
     
-    func initImageView() {
-
-        let originPoint = self.imageView.frame.origin
-        let frame = self.imageView.frame
-        print(self.imageView.frame)
-        
-        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseOut], animations: {
-            
-           // self.imageView.frame = CGRect(x: -frame.width, y: originPoint.y, width: frame.width, height: frame.height)
-            
-            self.imageView.center.x = 0 - self.imageView.frame.width
-            
-            print(self.imageView.frame)
-            
-            }) { (completed) in
-                
-//                self.imageView.frame = CGRect(x: self.view.frame.width, y: originPoint.y, width: frame.width, height: frame.height)
-//                
-//                UIView.animate(withDuration: 1, delay: 0.1, options: .curveEaseIn, animations: {
-//                    
-//                    self.imageView.frame = CGRect(x: originPoint.x, y: originPoint.y, width: frame.width, height: frame.height)
-//                    
-//
-//                    
-//                    }, completion: { (completed) in
-//                        
-//                        
-//                        
-//                })
-                
-        }
-        
+    func setupImageView() {
         self.imageView.contentMode = .scaleAspectFit
         self.imageView.image = self.pokemonImage.withRenderingMode(.alwaysTemplate)
-        
         self.pokemonCodeLabel.isHidden = true
+    }
+    
+    func initImageView() {
+        
+        if isFirst {
+            self.setupImageView()
+            self.initButton()
+            self.isFirst = false
+        } else {
+            DispatchQueue.main.async {
+                
+                UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut], animations: {
+                    
+                    self.imageView.center.x = 0 - self.imageView.frame.width
+   
+                    self.delay(0.1, closure: {
+                        self.setupImageView()
+                        
+                    })
+
+                }) { (completed) in
+                    
+                    self.delay(0.5, closure: {
+                        
+                        self.initButton()
+                        
+                    })
+                    
+                }
+            }
+        }
     }
     
     @IBAction func actionBack(_ sender: AnyObject) {
@@ -225,10 +228,10 @@ class PlayViewController: UIViewController {
                 self.pokemonCodeLabel.text = self.pokemonCode + "-" + self.pokemonName
                 self.pokemonCodeLabel.isHidden = false
 
-                self.delay(0.2, closure: {
-                    
-                    self.newSet()
-                    
+                self.delay(0.3, closure: {
+                    if self.isAnswered == true {
+                         self.newSet()
+                    }
                 })
         })
         
@@ -239,6 +242,10 @@ class PlayViewController: UIViewController {
     @IBAction func actionAnswer(_ sender: UIButton) {
         
         self.showRealImage()
+        for button in self.buttonAnswers {
+            button.isUserInteractionEnabled = false
+        }
+        self.isAnswered = true
         
         delay(Constant.PlayVC.ShowAnswerDelay) {
             
@@ -251,8 +258,7 @@ class PlayViewController: UIViewController {
                 if self.isSound == true {
                     Audio.sharedInstance.playSound(name: Constant.Music.RightSound, exten: Constant.Music.RightSoundExten)
                 }
-                
-                
+    
             } else {
                 sender.backgroundColor = UIColor.red
                 for button in self.buttonAnswers {
@@ -266,11 +272,6 @@ class PlayViewController: UIViewController {
                     Audio.sharedInstance.playSound(name: Constant.Music.WrongSound, exten: Constant.Music.WrongSoundExten)
                 }
                 
-            }
-            self.isAnswered = true
-            
-            for button in self.buttonAnswers {
-                button.isUserInteractionEnabled = false
             }
             
         }

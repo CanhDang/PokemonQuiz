@@ -41,7 +41,7 @@ struct Constant {
     }
     
     struct PlayVC {
-        static let PlayTime: Double = 60
+        static let PlayTime: Double = 10
         static let ShowImageDelay: Double = 0.7
         static let ShowAnswerDelay: Double = 0.5
     }
