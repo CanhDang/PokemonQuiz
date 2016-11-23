@@ -39,7 +39,7 @@ class SettingViewController: UIViewController {
         if UserDefaults.standard.value(forKey: Constant.Setting.IsMusic) as! Bool == true {
             self.switchMusic.isOn = true
             
-            Audio.sharedInstance.playMusic(name: Constant.Music.SettingMusic, exten: Constant.Music.SettingMusicExten)
+            //Audio.sharedInstance.playMusic(name: Constant.Music.SettingMusic, exten: Constant.Music.SettingMusicExten)
             self.isMusic = true
         } else {
             self.switchMusic.isOn = false

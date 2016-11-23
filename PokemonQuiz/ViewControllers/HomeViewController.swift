@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var highScoreLabel: UILabel!
     
+    var shouldPlayMusic: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +56,11 @@ class HomeViewController: UIViewController {
             }
 
         }
-        
-        if UserDefaults.standard.value(forKey: Constant.Setting.IsMusic) as! Bool == true {
-            Audio.sharedInstance.playMusic(name: Constant.Music.HomeMusic, exten: Constant.Music.HomeMusicExten)
+        if self.shouldPlayMusic {
+            if UserDefaults.standard.value(forKey: Constant.Setting.IsMusic) as! Bool == true {
+                Audio.sharedInstance.playMusic(name: Constant.Music.HomeMusic, exten: Constant.Music.HomeMusicExten)
+            }
+            self.shouldPlayMusic = false
         }
     }
 
@@ -95,7 +98,7 @@ class HomeViewController: UIViewController {
     @IBAction func invokePlayView(_ sender: AnyObject) {
         
         self.playButtonSound()
-        
+        self.shouldPlayMusic = true
         let playVC = self.storyboard?.instantiateViewController(withIdentifier: "PlayViewController") as! PlayViewController
         playVC.transferScoreDelegate = self
         
