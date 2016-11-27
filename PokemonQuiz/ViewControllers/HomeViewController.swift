@@ -10,13 +10,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    
+    var customTransition: CustomTransition!
     
     var currentScore: Int!
     
     @IBOutlet weak var lastScoreLabel: UILabel!
     
     @IBOutlet weak var highScoreLabel: UILabel!
+    
+    @IBOutlet weak var buttonPlay: UIButton!
     
     var shouldPlayMusic: Bool = true
     
@@ -28,8 +30,9 @@ class HomeViewController: UIViewController {
             UserDefaults.standard.set(true, forKey: Constant.Setting.IsSound)
             UserDefaults.standard.set([1], forKey: Constant.Setting.Gens)
         }
- 
+        
     }
+    
     
     func playButtonSound() {
         if UserDefaults.standard.value(forKey: Constant.Setting.IsSound) as! Bool == true {
@@ -95,6 +98,8 @@ class HomeViewController: UIViewController {
         
     }
     
+
+    
     @IBAction func invokePlayView(_ sender: AnyObject) {
         
         self.playButtonSound()
@@ -102,9 +107,17 @@ class HomeViewController: UIViewController {
         let playVC = self.storyboard?.instantiateViewController(withIdentifier: "PlayViewController") as! PlayViewController
         playVC.transferScoreDelegate = self
         
-        navigationController?.pushViewController(playVC, animated: true)
+        //navigationController?.pushViewController(playVC, animated: true)
+        playVC.transitioningDelegate = self 
+
+        self.customTransition = CustomTransition()
+        self.customTransition.button = self.buttonPlay
+        self.customTransition.transitionDuration = 0.5
+        
+        self.present(playVC, animated: true, completion: nil)
         
     }
+    
     
     @IBAction func invokeSettingView(_ sender: AnyObject) {
         
@@ -124,5 +137,17 @@ extension HomeViewController: TransferScore {
     }
     
 }
-
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        self.customTransition.isPresent = true
+        return self.customTransition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        self.customTransition.isPresent = false
+        return self.customTransition
+    }
+}
 

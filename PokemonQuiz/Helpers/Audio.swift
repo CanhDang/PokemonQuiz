@@ -13,6 +13,7 @@ class Audio {
     static let sharedInstance = Audio()
     
     var player: AVAudioPlayer?
+    var player2: AVAudioPlayer?
     
     func playMusic(name: String, exten: String) {
         let url = Bundle.main.url(forResource: name, withExtension: exten)!
@@ -32,11 +33,25 @@ class Audio {
     }
     
     func playSound(name: String, exten: String) {
-        var soundID: SystemSoundID = 0
-        let filePath = Bundle.main.path(forResource: name, ofType: exten)
-        let soundURL = NSURL(fileURLWithPath: filePath!)
-        AudioServicesCreateSystemSoundID(soundURL, &soundID)
-        AudioServicesPlaySystemSound(soundID)
+//        var soundID: SystemSoundID = 0
+//        let filePath = Bundle.main.path(forResource: name, ofType: exten)
+//        let soundURL = NSURL(fileURLWithPath: filePath!)
+//        AudioServicesCreateSystemSoundID(soundURL, &soundID)
+//        AudioServicesPlaySystemSound(soundID)
+        let url = Bundle.main.url(forResource: name, withExtension: exten)!
+        
+        do {
+            player2 = try AVAudioPlayer(contentsOf: url)
+            guard let player = player2 else { return }
+            
+            player.prepareToPlay()
+            player.play()
+            
+            player.numberOfLoops = 0
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
     
 }

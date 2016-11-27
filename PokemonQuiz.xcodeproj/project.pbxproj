@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45457D1A1DE7226D007520C8 /* ExtenString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45457D191DE7226D007520C8 /* ExtenString.swift */; };
+		45457D1C1DE732B0007520C8 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45457D1B1DE732B0007520C8 /* CustomTransition.swift */; };
 		457107A21DE18F0E00E1B8C6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457107A11DE18F0E00E1B8C6 /* SettingViewController.swift */; };
 		45710A8C1DE1982400E1B8C6 /* Abomasnow.png in Resources */ = {isa = PBXBuildFile; fileRef = 457107A51DE1982000E1B8C6 /* Abomasnow.png */; };
 		45710A8D1DE1982400E1B8C6 /* Abra.png in Resources */ = {isa = PBXBuildFile; fileRef = 457107A61DE1982000E1B8C6 /* Abra.png */; };
@@ -760,6 +762,7 @@
 		45710D8A1DE199CB00E1B8C6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45710D891DE199CB00E1B8C6 /* DataManager.swift */; };
 		45710D8D1DE19A0E00E1B8C6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 45710D8C1DE19A0E00E1B8C6 /* libsqlite3.tbd */; };
 		45710D901DE1A69A00E1B8C6 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45710D8F1DE1A69A00E1B8C6 /* Pokemon.swift */; };
+		4576B2B11DE9A0CA0029D349 /* JTMaterialTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4576B2B01DE9A0CA0029D349 /* JTMaterialTransition.swift */; };
 		457C8A201DDDE0B50007B790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C8A1F1DDDE0B50007B790 /* AppDelegate.swift */; };
 		457C8A251DDDE0B50007B790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457C8A231DDDE0B50007B790 /* Main.storyboard */; };
 		457C8A271DDDE0B50007B790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457C8A261DDDE0B50007B790 /* Assets.xcassets */; };
@@ -781,6 +784,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45457D191DE7226D007520C8 /* ExtenString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtenString.swift; sourceTree = "<group>"; };
+		45457D1B1DE732B0007520C8 /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		457107A11DE18F0E00E1B8C6 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		457107A51DE1982000E1B8C6 /* Abomasnow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Abomasnow.png; sourceTree = "<group>"; };
 		457107A61DE1982000E1B8C6 /* Abra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Abra.png; sourceTree = "<group>"; };
@@ -1541,6 +1546,7 @@
 		45710D891DE199CB00E1B8C6 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		45710D8C1DE19A0E00E1B8C6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		45710D8F1DE1A69A00E1B8C6 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		4576B2B01DE9A0CA0029D349 /* JTMaterialTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTMaterialTransition.swift; sourceTree = "<group>"; };
 		457C8A1C1DDDE0B50007B790 /* PokemonQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457C8A1F1DDDE0B50007B790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457C8A241DDDE0B50007B790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -2437,6 +2443,7 @@
 		45A528841DE021AB00112D75 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				4576B2B01DE9A0CA0029D349 /* JTMaterialTransition.swift */,
 				45710D761DE1990200E1B8C6 /* fmdb */,
 				45A528851DE021AB00112D75 /* RPCircularProgress.swift */,
 				45710D731DE198CC00E1B8C6 /* PokemonQuiz-Bridging-Header.h */,
@@ -2478,6 +2485,8 @@
 			isa = PBXGroup;
 			children = (
 				45ABE4701DE34A6D0092DC03 /* Audio.swift */,
+				45457D191DE7226D007520C8 /* ExtenString.swift */,
+				45457D1B1DE732B0007520C8 /* CustomTransition.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -3311,14 +3320,17 @@
 				457C8A401DDE04990007B790 /* HomeViewController.swift in Sources */,
 				45A528861DE021AB00112D75 /* RPCircularProgress.swift in Sources */,
 				457C8A3E1DDE046A0007B790 /* PlayViewController.swift in Sources */,
+				4576B2B11DE9A0CA0029D349 /* JTMaterialTransition.swift in Sources */,
 				457C8A381DDDFE9F0007B790 /* CircleView.swift in Sources */,
 				45710D841DE1990200E1B8C6 /* FMDatabaseAdditions.m in Sources */,
 				45710D871DE1990200E1B8C6 /* FMResultSet.m in Sources */,
 				45710D901DE1A69A00E1B8C6 /* Pokemon.swift in Sources */,
+				45457D1A1DE7226D007520C8 /* ExtenString.swift in Sources */,
 				45ABE46E1DE347510092DC03 /* Constant.swift in Sources */,
 				457107A21DE18F0E00E1B8C6 /* SettingViewController.swift in Sources */,
 				45ABE4711DE34A6D0092DC03 /* Audio.swift in Sources */,
 				45710D851DE1990200E1B8C6 /* FMDatabasePool.m in Sources */,
+				45457D1C1DE732B0007520C8 /* CustomTransition.swift in Sources */,
 				45710D861DE1990200E1B8C6 /* FMDatabaseQueue.m in Sources */,
 				457C8A201DDDE0B50007B790 /* AppDelegate.swift in Sources */,
 				45710D8A1DE199CB00E1B8C6 /* DataManager.swift in Sources */,

@@ -14,11 +14,14 @@ protocol TransferScore: class {
 
 class PlayViewController: UIViewController {
     
+
+    
     var transferScoreDelegate: TransferScore!
     
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet var buttonAnswers: [UIButton]!
+    
     
     @IBOutlet weak var scoreLabel: UILabel!
     
@@ -26,11 +29,14 @@ class PlayViewController: UIViewController {
     
     @IBOutlet weak var progressView: RPCircularProgress!
     
+    
+    
     var score: Int = 0
     
     var pokemonImage: UIImage!
     var pokemonName: String!
     var pokemonCode: String!
+    var pokemonColor: String! 
     
     var rightTag: Int!
     var isAnswered: Bool = false
@@ -51,6 +57,7 @@ class PlayViewController: UIViewController {
         super.viewDidLoad()
         UIApplication.shared.statusBarStyle = .lightContent
         
+        
         self.initMusic()
         self.initListPokemon()
         
@@ -58,7 +65,11 @@ class PlayViewController: UIViewController {
             button.layer.cornerRadius = 20
         }
         self.imageView.layer.cornerRadius = 5
-        
+        self.newSet()
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.progressView.updateProgress(1, animated: true, initialDelay: 0, duration: Constant.PlayVC.PlayTime) {
             
             for button in self.buttonAnswers {
@@ -71,14 +82,15 @@ class PlayViewController: UIViewController {
             
             self.delay(0.9, closure: {
                 if !self.isBack {
-                    self.navigationController!.popViewController(animated: true)
+                    //self.navigationController!.popViewController(animated: true)
+                    self.dismiss(animated: true, completion: nil)
                 }
                 
                 self.transferScoreDelegate.transferScore(score: self.score)
             })
-
+            
         }
-        self.newSet()
+        
     }
     
     func initMusic() {
@@ -110,12 +122,14 @@ class PlayViewController: UIViewController {
     func newSet() {
         
         self.randomPokemon()
+        self.view.backgroundColor = self.pokemonColor.hexColor
         self.initImageView()
         
         for button in buttonAnswers {
             button.backgroundColor = UIColor.white
         }
         self.isAnswered = false
+        
     }
     
     func randomPokemon() {
@@ -138,6 +152,7 @@ class PlayViewController: UIViewController {
         self.pokemonName = self.listPokemon[randomNumber].name
         self.pokemonImage = UIImage(named: self.listPokemon[randomNumber].img)
         self.pokemonCode = self.listPokemon[randomNumber].tag
+        self.pokemonColor = self.listPokemon[randomNumber].color
         
         var randomButton = -1
         
@@ -198,7 +213,7 @@ class PlayViewController: UIViewController {
 
                 }) { (completed) in
                     
-                    self.delay(0.5, closure: {
+                    self.delay(0.3, closure: {
                         
                         self.initButton()
                         
@@ -213,9 +228,13 @@ class PlayViewController: UIViewController {
         
         self.isBack = true
         
-        self.navigationController!.popViewController(animated: true)
-        
         self.transferScoreDelegate.transferScore(score: self.score)
+        
+        //self.navigationController!.popViewController(animated: true)
+        
+        self.dismiss(animated: true, completion: nil)
+        
+        
     }
     
     func showRealImage() {
@@ -283,3 +302,13 @@ class PlayViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
 }
+
+
+
+
+
+
+
+
+
+

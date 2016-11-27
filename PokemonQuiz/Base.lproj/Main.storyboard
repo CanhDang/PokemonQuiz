@@ -116,6 +116,7 @@
                     <navigationItem key="navigationItem" id="K2B-0L-13p"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="buttonPlay" destination="EOc-o5-3qY" id="ZTf-rj-EUJ"/>
                         <outlet property="highScoreLabel" destination="mw0-Ca-eGT" id="YHd-fp-SlE"/>
                         <outlet property="lastScoreLabel" destination="i5h-w6-Mxb" id="hSG-YN-Lmo"/>
                     </connections>
@@ -468,7 +469,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="unT-el-Z6Q" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="22l-in-bFq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="22l-in-bFq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

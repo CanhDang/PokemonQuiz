@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "PlayViewController.viewDidLoad() -&gt; ():PlayViewController.swift">
+         contextName = "PlayViewController.(viewDidLoad() -&gt; ()).(closure #1):PlayViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.listPokemon">
+               value = "Constant.PlayVC.PlayTime">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -15,6 +15,17 @@
          <PersistentStrings>
             <PersistentString
                value = "self.imageView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PlayViewController.viewDidLoad() -&gt; ():PlayViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.listPokemon">
+            </PersistentString>
+            <PersistentString
+               value = "buttonAnswers">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
